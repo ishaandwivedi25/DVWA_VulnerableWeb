@@ -1,0 +1,9 @@
+Simple XSS doesn't work e.g. <script>alert(1)</script>
+
+Viewing the source, we see that the nonce value is "TmV2ZXIgZ29pbmcgdG8gZ2l2ZSB5b3UgdXA="
+
+The CSP nonce parameter allows the script tag to execute if the nonce attribute value 
+is equal to the header value.
+
+Hence this script would work: 
+<script nonce="TmV2ZXIgZ29pbmcgdG8gZ2l2ZSB5b3UgdXA=">alert("Hacked by Divyanshu");</script>

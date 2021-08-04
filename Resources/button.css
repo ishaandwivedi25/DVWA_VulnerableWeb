@@ -1,0 +1,22 @@
+.button button {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  width: 30%;
+  display: block;
+  text-align: center;
+}
+
+button {
+  min-width: 200px;
+}
+
+.button button:hover {
+  background-color: rgb(182, 11, 11);
+}
+
+.btn-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
